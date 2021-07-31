@@ -6,8 +6,8 @@
 ;; Maintainer: Stephen Leake <stephen_leake@stephe-leake.org>
 ;; Keywords: languages
 ;;  ada
-;; Version: 7.1.5
-;; package-requires: ((uniquify-files "1.0.1") (wisi "3.1.3") (emacs "25.0"))
+;; Version: 7.1.6
+;; package-requires: ((uniquify-files "1.0.1") (wisi "3.1.3") (emacs "25.3"))
 ;; url: http://www.nongnu.org/ada-mode/
 ;;
 ;; This file is part of GNU Emacs.
@@ -144,7 +144,7 @@ rather than to the same column."
   :safe #'booleanp)
 
 (defcustom ada-which-func-parse-size 30000
-  "Minimum size of the region surrounding point that is parsed for `which-function-mode'."
+  "Minimum size of region around point parsed for `which-function-mode'."
   :group 'ada
   :type 'integer
   :safe #'integerp)
@@ -1601,8 +1601,6 @@ Prompts with completion, defaults to filename at point."
 		 (modes   . '(ada-mode))))
 
   (setq align-mode-rules-list ada-align-rules)
-
-  (easy-menu-add ada-mode-menu ada-mode-map)
 
   (wisi-setup
    :indent-calculate '(ada-wisi-comment)

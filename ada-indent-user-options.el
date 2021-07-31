@@ -70,7 +70,8 @@ Otherwise, they are indented as previous comments or code."
 (make-variable-buffer-local 'ada-indent-comment-gnat)
 
 (defcustom ada-indent-label -3
-  "Indentation for a loop, block, or statement label, relative to the item it labels.
+  "Indentation for a loop, block, or statement label,
+relative to the item it labels.
 
 Example :
    Label_1 :
@@ -170,7 +171,8 @@ An example is:
 
 (defcustom ada-indent-hanging-rel-exp nil
   "If nil, indent hanging lines in an expression relative to the first line.
-Otherwise, indent by `ada-indent-broken' relative to the start of the expression."
+Otherwise, indent by `ada-indent-broken' relative to the start of
+the expression."
   :type 'boolean
   :safe #'booleanp)
 (make-variable-buffer-local 'ada-indent-hanging-rel-exp)
